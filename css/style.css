@@ -1,0 +1,412 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap");
+/* No AI has been used to create this website */
+@layer Variables {
+	:root {
+		--primary: #f7cb71;
+		--background: #151001;
+		--text: #fdf1d6;
+		--accent: #099724;
+		--border-rad: 0.5rem;
+		--border-pill: 100vw;
+		--transition: 0.2s ease-out;
+		--lnrGrd-bottom: linear-gradient(
+			var(--_grdStart, rgb(from var(--background) r g b / 0.3)),
+			var(--background)
+		);
+	}
+}
+@layer SetAndReset {
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		line-height: 1;
+	}
+	::selection {
+		background-color: var(--primary);
+		color: var(--accent);
+	}
+}
+
+@layer Shared {
+	.block {
+		display: block;
+	}
+	.flex {
+		display: flex;
+		flex-wrap: wrap;
+		&.flex-dirCol {
+			flex-direction: column;
+		}
+		&.flex-fill > * {
+			flex: 1;
+		}
+	}
+	.grid {
+		display: grid;
+	}
+	.alignCenter {
+		align-items: center;
+	}
+	.justCenter {
+		justify-content: center;
+	}
+	.justBetween {
+		justify-content: space-between;
+	}
+	.txtCenter {
+		text-align: center;
+	}
+	.container {
+		font-family: "Playfair", serif;
+		font-optical-sizing: auto;
+		font-style: normal;
+		padding: 0.25rem 8%;
+	}
+	.card {
+		position: relative;
+		border-radius: var(--border-rad);
+		overflow: hidden;
+		.cardImg {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			background: #15100180;
+		}
+	}
+	.fontCol-accent {
+		color: var(--accent);
+	}
+	.fontCol-primary {
+		color: var(--primary);
+	}
+	.fontCol-background {
+		color: var(--background);
+	}
+	.fontCol-text {
+		color: var(--text);
+	}
+	.bgCol-accent {
+		background-color: var(--accent);
+	}
+	.bgCol-primary {
+		background-color: var(--primary);
+	}
+	.bgCol-background {
+		background-color: var(--background);
+	}
+	.bgCol-text {
+		background-color: var(--text);
+	}
+	.btn {
+		display: inline-block;
+		padding: 0.5rem 1rem;
+		text-decoration: none;
+		border-radius: var(--border-rad);
+	}
+	.btn-block {
+		background-color: var(--_btn-bg, var(--primary));
+		color: var(--_btn-fg, var(--background));
+		border: none;
+		border: 1px solid transparent;
+		transition: var(--transition);
+		&:hover {
+			color: var(--_btn-bg, var(--primary));
+			background: var(--_btn-fg, var(--background));
+			border-color: var(--_btn-bg, var(--primary));
+		}
+	}
+}
+
+@layer Navbar {
+	.nav {
+		position: absolute;
+		width: 100%;
+		padding-top: 0.25rem;
+		padding-bottom: 0.25rem;
+		background: linear-gradient(var(--background), transparent);
+		z-index: 1;
+		/* Applies to Children */
+		font-size: 1.2rem;
+		justify-content: space-between;
+
+		/* Animation Slide In */
+		animation: navbar linear forwards;
+		animation-timeline: view();
+		animation-range-start: calc(120vh);
+		animation-range-end: calc(170vh);
+
+		.logoImg {
+			max-width: 4rem;
+		}
+	}
+	.navLinks {
+		list-style: none;
+		gap: 2rem;
+	}
+	.navLinkItem {
+		padding: 0.5rem;
+		border: 1px solid transparent;
+		border-radius: var(--border-rad);
+		text-decoration: none;
+		transition: var(--transition);
+		&:hover {
+			background-color: rgb(from var(--text) r g b / 0.2);
+			border-color: rgb(from var(--text) r g b / 0.2);
+		}
+	}
+	@keyframes navbar {
+		100% {
+			position: fixed;
+			top: 0;
+			background: rgb(from var(--background) r g b / 0.5);
+			backdrop-filter: blur(12px);
+			border-bottom: 1px rgb(from var(--primary) r g b / 0.1) solid;
+			box-shadow: 5px 0 15px var(--background);
+		}
+		20% {
+			position: fixed;
+			top: -200px;
+		}
+		0% {
+			position: absolute;
+			top: 0;
+		}
+	}
+	@media only screen {
+	}
+}
+@layer HeroSection {
+	.hero {
+		/* button colors */
+		--_btn-bg: var(--accent);
+		--_btn-fg: var(--background);
+
+		min-height: 100vh;
+		background: var(--lnrGrd-bottom), url(./../img/hero-image.jpg);
+		background-size: cover;
+		/* Applies to Children */
+		gap: 4rem;
+		font-size: 1.2rem;
+	}
+	.hOne {
+		font-size: clamp(3rem, 7vw, 6rem);
+		line-height: 1;
+		font-weight: 400;
+		text-shadow: 0px 5px 5px var(--background);
+	}
+	.highlight {
+		font-weight: 700;
+	}
+	.heroForm {
+		padding: 1rem;
+		width: clamp(60vw, 400px, 90vw);
+		border-radius: var(--border-rad);
+	}
+	.labelInput {
+		gap: 0.25rem;
+		> label {
+			transition: var(--transition);
+		}
+		&:focus-within label {
+			font-size: 0.8rem;
+		}
+	}
+	.heroForm input,
+	.heroForm select {
+		padding: 0.25rem;
+		background-color: var(--text);
+		border-radius: var(--border-rad);
+		border-color: transparent;
+	}
+	.heroForm .btn {
+		aspect-ratio: 1 / 1;
+		font-size: 1.2rem;
+	}
+}
+@layer GenreSection {
+	.hTwo {
+		font-size: 3rem;
+	}
+	.genre {
+		padding: 2rem auto;
+		margin: 5rem auto;
+	}
+	.genre .grid {
+		gap: 2rem;
+		font-size: 1.2rem;
+		grid-template-columns: repeat(auto-fit, minmax(min(25vw, 150px), 1fr));
+		& a > * {
+			margin: 0.25rem 0;
+		}
+		& :last-child {
+			--_btn-bg: var(--accent);
+		}
+	}
+}
+@layer RecentlyAddedAndMostBeloved {
+	.suggestion {
+		padding: 2rem auto;
+		margin: 5rem auto;
+	}
+	.suggestion .grid {
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+	}
+	.suggestion .card {
+		height: 400px;
+		background: var(--lnrGrd-bottom);
+		transition: var(--transition);
+		border: 1px solid var(--primary);
+
+		&:hover {
+			transform: translateY(-1rem);
+			border-width: 3px;
+		}
+	}
+	.suggestion .card .tag {
+		position: absolute;
+		bottom: 0;
+		width: fit-content;
+		color: var(--background);
+		padding: 0.5rem;
+		background-color: var(--primary);
+		font-size: 1.2rem;
+		backdrop-filter: blur(5px);
+		border-top-right-radius: var(--border-rad);
+		box-shadow: 0 -2px 10px var(--background);
+	}
+	.suggestion .btn {
+		margin: 2rem auto;
+		--_btn-bg: var(--accent);
+		font-size: 1.2rem;
+	}
+}
+@layer NewsLetter {
+	.subscribe .card {
+		gap: 2em;
+		padding: 3rem;
+		height: 70vh;
+		border: 2px solid var(--primary);
+		background:
+			linear-gradient(
+				to right,
+				rgb(from var(--background) r g b / 0.95) 30%,
+				transparent
+			),
+			url(./../img/banner.jpg);
+		background-size: cover;
+		background-position: center right;
+	}
+	.subscribe .input {
+		padding: 0.25rem;
+		width: min(250px, 80vw);
+		background-color: var(--text);
+		border-radius: var(--border-rad);
+		border-color: transparent;
+	}
+	.subscribe span {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+@layer Footer {
+	.footer {
+		width: 100%;
+		padding-top: 2rem;
+		margin-top: 5rem;
+		margin-bottom: 3rem;
+
+		h2,
+		p,
+		a,
+		hr {
+			opacity: 0.3;
+		}
+		a {
+			color: var(--accent);
+			transition: var(--transition);
+			&:hover {
+				opacity: 0.5;
+			}
+		}
+	}
+	.footer > .flex {
+		gap: 3em;
+	}
+	.footer span {
+		gap: 2rem;
+	}
+	hr {
+		width: 100%;
+		border: 1px solid var(--text);
+	}
+}
+
+@layer OurPicks {
+	.ourPicks {
+		counter-reset: counter(count);
+		margin: 0;
+		padding: 5rem;
+		.grid {
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+			justify-content: center;
+			& > .card {
+				counter-increment: count;
+
+				&::after {
+					position: absolute;
+					top: 0;
+					left: 0;
+					padding: 0 1rem;
+					font-size: 6rem;
+					content: counter(count);
+					color: var(--text);
+					opacity: 0.8;
+					background: var(--background);
+					backdrop-filter: blur(12px);
+					border-bottom-right-radius: var(--border-rad);
+				}
+				&.grid {
+					grid-template-columns: auto 1fr;
+					gap: 0;
+					align-items: center;
+				}
+				&:first-child {
+					background-color: var(--primary);
+					grid-column: 1/3;
+					span.fontCol-text {
+						height: 100%;
+						padding: 0.5rem 1rem;
+						.btn {
+							display: inline-block;
+							width: 100%;
+							z-index: 1;
+						}
+					}
+					.cardImg {
+						height: 100%;
+						width: fit-content;
+						border-radius: var(--border-rad);
+						outline: 2px solid var(--primary);
+					}
+				}
+			}
+		}
+		.card {
+			height: min(500px, 70vh);
+		}
+	}
+}
+
+/* Important to be Removed */
+@layer Debugging {
+	/* * {
+		outline: 1px solid red;
+		outline-offset: -1px;
+	} */
+	.tmp {
+		height: 100vh;
+	}
+}

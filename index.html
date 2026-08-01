@@ -1,0 +1,237 @@
+<!doctype html>
+<!-- No AI has been used in making of this Site.  -->
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>RiRead</title>
+		<script
+			src="https://kit.fontawesome.com/8d7e09f720.js"
+			crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="./css/style.css" />
+	</head>
+	<body class="bgCol-background">
+		<nav class="flex nav alignCenter container">
+			<a href="./"><img src="./img/logo.png" alt="RiRead" class="logoImg" /></a>
+			<ul class="flex just-center navLinks">
+				<li><a href="" class="navLinkItem fontCol-text">Most Loved</a></li>
+				<li><a href="" class="navLinkItem fontCol-text">Latest</a></li>
+				<li>
+					<a href="./html/ourPicks.html" class="navLinkItem fontCol-text"
+						>Our Picks</a
+					>
+				</li>
+			</ul>
+			<span>
+				<a href="" class="btn btn-block">Login</a>
+			</span>
+		</nav>
+
+		<main>
+			<section
+				class="container flex flex-dirCol justCenter alignCenter hero"
+				alt="https://www.pexels.com/photo/colorful-library-bookshelf-with-diverse-subjects-35600382/">
+				<h1 class="hOne txtCenter fontCol-text">
+					What do you<br />want to
+					<i class="highlight fontCol-primary">Read ?</i>
+				</h1>
+				<form
+					class="flex alignCenter justBetween heroForm bgCol-text fontCol-background"
+					action="/"
+					method="get">
+					<div class="flex flex-dirCol labelInput">
+						<label for="Title">Title</label>
+						<input
+							type="text"
+							name="Title"
+							id="Title"
+							placeholder="What is it called?" />
+					</div>
+					<div class="flex flex-dirCol labelInput">
+						<label for="Author">Author</label>
+						<input
+							type="text"
+							name="Author"
+							id="Title"
+							placeholder="Who wrote it?" />
+					</div>
+					<div class="flex flex-dirCol labelInput">
+						<label for="Date">Released After</label>
+						<input type="Date" name="Date" id="Date" />
+					</div>
+					<div class="flex flex-dirCol labelInput">
+						<label for="Genre">Genre</label>
+						<select name="Genre" id="Genre">
+							<option selected disabled>It felt Like...</option>
+							<hr />
+							<option value="fiction">Fiction</option>
+							<option value="nonFiction">Non-fiction</option>
+							<option value="other">Other</option>
+						</select>
+					</div>
+					<button class="btn btn-block">
+						<i class="fa-solid fa-magnifying-glass"></i>
+					</button>
+				</form>
+			</section>
+			<section class="container genre">
+				<h2 class="fontCol-primary hTwo">Genre</h2>
+				<br /><br />
+				<div class="grid txtCenter">
+					<a href="" class="btn btn-block">
+						<i class="fa-xl fa-solid fa-hand-fist"></i>
+						<p>Action</p>
+					</a>
+					<a href="" class="btn btn-block">
+						<i class="fa-xl fa-solid fa-route"></i>
+						<p>Adventure</p>
+					</a>
+					<a href="" class="btn btn-block">
+						<i class="fa-xl fa-solid fa-dragon"></i>
+						<p>Fantasy</p>
+					</a>
+					<a href="" class="btn btn-block">
+						<i class="fa-xl fa-solid fa-user-astronaut"></i>
+						<p>Sci-Fi</p>
+					</a>
+					<a href="" class="btn btn-block">
+						<i class="fa-xl fa-solid fa-heart"></i>
+						<p>Romance</p>
+					</a>
+					<a href="" class="btn btn-block">
+						<i class="fa-xl fa-solid fa-skull"></i>
+						<p>Horror</p>
+					</a>
+					<a href="" class="btn btn-block">
+						<i class="fa-xl fa-solid fa-brush"></i>
+						<p>Art</p>
+					</a>
+					<a href="" class="btn btn-block">
+						<i class="fa-xl fa-solid fa-mortar-pestle"></i>
+						<p>Cooking</p>
+					</a>
+					<a href="" class="btn btn-block">
+						<i class="fa-xl fa-solid fa-scale-balanced"></i>
+						<p>Law</p>
+					</a>
+					<a href="" class="btn btn-block">
+						<i class="fa-xl fa-solid fa-clock-rotate-left"></i>
+						<p>History</p>
+					</a>
+					<a href="" class="btn btn-block">
+						<i class="fa-xl fa-solid fa-money-bill-1-wave"></i>
+						<p>Finance</p>
+					</a>
+					<a href="" class="btn btn-block">
+						<i class="fa-xl fa-solid fa-plus"></i>
+						<p>More</p>
+					</a>
+				</div>
+			</section>
+			<section id="RecentlyAdded" class="container suggestion">
+				<h2 class="fontCol-primary hTwo">Recently Added</h2>
+				<br /><br />
+				<div class="grid">
+					<div class="card">
+						<img class="cardImg" src="./img/recent/bk1.jpg" alt="Something" />
+						<p class="fontCol-background txtCenter txtPos-bottom tag">
+							Fiction
+						</p>
+					</div>
+					<div class="card">
+						<img class="cardImg" src="./img/recent/bk2.jpg" alt="Something" />
+						<p class="txtCenter txtPos-bottom tag">Historical Fiction</p>
+					</div>
+					<div class="card">
+						<img class="cardImg" src="./img/recent/bk3.jpg" alt="Something" />
+						<p class="txtCenter txtPos-bottom tag">Mystery & Thriller</p>
+					</div>
+					<div class="card">
+						<img class="cardImg" src="./img/recent/bk4.jpg" alt="Something" />
+						<p class="txtCenter txtPos-bottom tag">Romance</p>
+					</div>
+				</div>
+				<span>
+					<a href="" class="btn btn-block">View More</a>
+				</span>
+			</section>
+			<section id="MostBeloved" class="container suggestion">
+				<h2 class="fontCol-primary hTwo">Most Beloved</h2>
+				<br /><br />
+				<div class="grid">
+					<div class="card">
+						<img class="cardImg" src="./img/recent/bk5.jpg" alt="Something" />
+						<p class="txtCenter txtPos-bottom tag">Romantasy</p>
+					</div>
+					<div class="card">
+						<img class="cardImg" src="./img/recent/bk6.jpg" alt="Something" />
+						<p class="txtCenter txtPos-bottom tag">Fantasy</p>
+					</div>
+					<div class="card">
+						<img class="cardImg" src="./img/recent/bk7.jpg" alt="Something" />
+						<p class="txtCenter txtPos-bottom tag">Science Fiction</p>
+					</div>
+					<div class="card">
+						<img class="cardImg" src="./img/recent/bk8.jpg" alt="Something" />
+						<p class="txtPos-bottom tag">Horror</p>
+					</div>
+				</div>
+				<span>
+					<a href="" class="btn btn-block">View More</a>
+				</span>
+			</section>
+			<section
+				class="container subscribe"
+				alt="Photo by Tima Miroshnichenko from Pexels: https://www.pexels.com/photo/an-elderly-man-typing-on-a-vintage-typewriter-9572699/">
+				<div class="card flex flex-dirCol justCenter">
+					<h3 class="hTwo fontCol-primary txtPos-bottom">
+						Subscribe to<br />Our Newsletter
+					</h3>
+					<p class="fontCol-text">
+						Want to stay in the know? <br />Subscribe now & discover the <br />
+						fascinating stories behind the authors we interview
+					</p>
+					<form action="/" method="get">
+						<input
+							class="input"
+							type="email"
+							name="email"
+							id="Email"
+							placeholder="youremail@example.com" />
+						<button class="btn btn-block">Subscribe</button>
+					</form>
+				</div>
+			</section>
+		</main>
+		<footer class="container footer">
+			<div class="flex flex-dirCol txtCenter alignCenter" alt="">
+				<h2 class="fontCol-primary hTwo">About</h2>
+				<p class="fontCol-text">
+					RiRead is more than just a digital bookstore. We're a community of
+					book lovers, connecting readers with authors, brand authors with
+					readers. We're dedicated to sharing the stories, passions, and
+					expertise of the publishing world. Join us and discover the thrill of
+					reading, the power of storytelling, and the joy of community.
+				</p>
+				<span class="flex">
+					<a href="" class="">
+						<i class="fa-2xl fa-brands fa-facebook"></i>
+					</a>
+					<a href="" class="">
+						<i class="fa-2xl fa-brands fa-square-instagram"></i>
+					</a>
+					<a href="" class="">
+						<i class="fa-2xl fa-brands fa-square-linkedin"></i>
+					</a>
+					<a href="" class="">
+						<i class="fa-2xl fa-brands fa-github"></i>
+					</a>
+				</span>
+				<hr />
+				<p class="fontCol-text">
+					Copyright &copy; 2026 RiRead All Rights Reserved
+				</p>
+			</div>
+		</footer>
+	</body>
+</html>
