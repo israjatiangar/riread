@@ -155,6 +155,10 @@
 			border-color: rgb(from var(--text) r g b / 0.2);
 		}
 	}
+	.bars {
+		display: none;
+		color: var(--text);
+	}
 	@keyframes navbar {
 		100% {
 			position: fixed;
@@ -173,7 +177,27 @@
 			top: 0;
 		}
 	}
-	@media only screen {
+	@media only screen and (max-width: 500px) {
+		.nav {
+			display: block;
+			align-items: flex-start;
+			gap: 2rem;
+			max-height: max(80px, 10vh);
+			overflow: hidden;
+			> * {
+				margin: 20px 0;
+			}
+			.navLinks {
+				flex-direction: column;
+			}
+		}
+		.bars {
+			display: block;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			transform: translate(-100%, -50%);
+		}
 	}
 }
 @layer HeroSection {
