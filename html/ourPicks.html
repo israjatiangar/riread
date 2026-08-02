@@ -8,25 +8,29 @@
 		<script
 			src="https://kit.fontawesome.com/8d7e09f720.js"
 			crossorigin="anonymous"></script>
+		<script src="./../js/script.js"></script>
 		<link rel="stylesheet" href="./../css/style.css" />
 	</head>
 	<body class="bgCol-background">
-		<nav class="flex nav alignCenter container">
-			<a href="./../index.html"
+		<nav class="flex nav alignCenter container hidden" id="NavBar">
+			<a href="./"
 				><img src="./../img/logo.png" alt="RiRead" class="logoImg"
 			/></a>
 			<ul class="flex just-center navLinks">
 				<li><a href="" class="navLinkItem fontCol-text">Most Loved</a></li>
 				<li><a href="" class="navLinkItem fontCol-text">Latest</a></li>
 				<li>
-					<a href="./ourPicks.html" class="navLinkItem fontCol-text"
+					<a href="./../html/ourPicks.html" class="navLinkItem fontCol-text"
 						>Our Picks</a
 					>
 				</li>
 			</ul>
 			<span>
-				<a href="./login.html" class="btn btn-block">Login</a>
+				<a href="./../html/login.html" class="btn btn-block">Login</a>
 			</span>
+			<span onclick="navToggle()" class="bars"
+				><i class="fa 2xl fa-solid fa-bars"></i
+			></span>
 		</nav>
 		<main class="container ourPicks suggestion">
 			<h2 class="hOne fontCol-primary txtCenter">Our Top Picks</h2>
