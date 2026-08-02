@@ -348,6 +348,29 @@
 		top: 50%;
 		transform: translateY(-50%);
 	}
+	@media only screen and (max-width: 500px) {
+		.subscribe .card {
+			height: 80vh;
+			background-position: center center;
+			flex-direction: column;
+			flex-wrap: nowrap;
+			justify-content: end;
+			padding: 1rem;
+			background:
+				linear-gradient(
+					to top,
+					rgb(from var(--background) r g b / 0.95) 40%,
+					transparent
+				),
+				url(./../img/banner.jpg);
+			background-size: cover;
+			background-position: bottom center;
+			form {
+				display: flex;
+				gap: 1rem;
+			}
+		}
+	}
 }
 @layer Footer {
 	.footer {
