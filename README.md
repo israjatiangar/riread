@@ -8,7 +8,7 @@ An online bookstore web application built with HTML and CSS as a foundational pr
 
 ### Purpose
 
-- Demonstrate HTML structure and CSS styling capabilities (i tried my best to keep it clean)
+- Demonstrate HTML structure and CSS styling capabilities (~~ if i hadn't known css framework exist, i would have written better css, sorry.~~)
 - Practice building responsive web design with a _tiny little bit of_ JavaScript interactivity
 - Implement a functional responsive navbar using JavaScript
 - Build around a meaningful concept (online bookstore) that interests me
@@ -26,10 +26,15 @@ An online bookstore web application built with HTML and CSS as a foundational pr
 - Hero Banner Photo by
   [Ali Haider from Pexels](https://www.pexels.com/photo/colorful-library-bookshelf-with-diverse-subjects-35600382/)
 
-- Newsletter Section Photo by [Tima Miroshnichenko from Pexels](https://www.pexels.com/photo/an-elderly-man-typing-on-a-vintage-typewriter-9572699/)
+- Login Page Banner Photo by
+  [Yasemin Gül from Pexels](https://www.pexels.com/photo/bookshelves-filled-with-books-in-a-library-22815845/)
 
-- All the other Books Photos by [Goodreads Best Books 2025](https://www.goodreads.com/choiceawards/best-books-2025)
+- Newsletter Section Photo by
+  [Tima Miroshnichenko from Pexels](https://www.pexels.com/photo/an-elderly-man-typing-on-a-vintage-typewriter-9572699/)
+
+- All the other Books Photos by
+  [Goodreads Best Books 2025](https://www.goodreads.com/choiceawards/best-books-2025)
 
 ---
 
-Made with love by [Rajat Iangar](https://github.com/israjatiangar)
+Made with :heart: by [Rajat Iangar](https://github.com/israjatiangar)

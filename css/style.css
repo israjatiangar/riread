@@ -399,9 +399,13 @@
 		}
 	}
 }
+/* Beyond this point, the author was tired of being civilised and wanted to get things over with. */
 @layer LoginAndSignUp {
 	.login {
+		--_btn-bg: var(--accent);
+		--_btn-fg: var(--background);
 		min-height: 100vh;
+		font-size: 1.2rem;
 		background:
 			linear-gradient(
 				var(--background),
@@ -410,6 +414,49 @@
 			),
 			url(./../img/loginPageBanner.jpg);
 		background-size: contain;
+	}
+	.login > .flex {
+		gap: 1rem;
+		padding: 1rem;
+		border: 2px solid;
+		border-color: rgb(from var(--primary) r g b / 0.3);
+		box-shadow: 0 0 10px var(--background);
+		border-radius: var(--border-rad);
+		background: rgb(from var(--text) r g b / 0.3);
+		backdrop-filter: blur(12px);
+	}
+	.login form {
+		padding: 1rem;
+		gap: 1rem;
+		width: min(400px, 90vw);
+	}
+	.login form label {
+		gap: 0.25rem;
+		> label {
+			transition: var(--transition);
+		}
+	}
+	.login input,
+	.login select {
+		padding: 0.5rem;
+		background-color: rgb(from var(--text) r g b / 0.2);
+		border-radius: var(--border-rad);
+		border-color: transparent;
+	}
+	.login hr {
+		border-color: #151001;
+		width: 100px;
+		align-self: center;
+	}
+	.social.flex {
+		width: 100%;
+		padding: 1rem;
+		justify-content: center;
+		gap: 2rem;
+		a {
+			display: block;
+			color: var(--background);
+		}
 	}
 }
 
