@@ -247,6 +247,20 @@
 		aspect-ratio: 1 / 1;
 		font-size: 1.2rem;
 	}
+	@media only screen and (max-width: 500px) {
+		.heroForm {
+			width: 100%;
+			flex-direction: column;
+			gap: 1rem;
+			& > * {
+				width: 100%;
+				flex: 1;
+			}
+			.btn {
+				aspect-ratio: 9 / 1;
+			}
+		}
+	}
 }
 @layer GenreSection {
 	.hTwo {
