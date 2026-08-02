@@ -402,10 +402,9 @@
 /* Beyond this point, the author was tired of being civilised and wanted to get things over with. */
 @layer LoginAndSignUp {
 	.login {
-		--_btn-bg: var(--accent);
-		--_btn-fg: var(--background);
 		min-height: 100vh;
 		font-size: 1.2rem;
+		gap: 2rem;
 		background:
 			linear-gradient(
 				var(--background),
@@ -414,15 +413,21 @@
 			),
 			url(./../img/loginPageBanner.jpg);
 		background-size: contain;
+		.forgot {
+			font-size: 0.8rem;
+			color: var(--background);
+		}
 	}
 	.login > .flex {
+		--_btn-bg: var(--accent);
+		--_btn-fg: var(--background);
 		gap: 1rem;
 		padding: 1rem;
 		border: 2px solid;
 		border-color: rgb(from var(--primary) r g b / 0.3);
 		box-shadow: 0 0 10px var(--background);
 		border-radius: var(--border-rad);
-		background: rgb(from var(--text) r g b / 0.3);
+		background: rgb(from var(--text) r g b / 0.2);
 		backdrop-filter: blur(12px);
 	}
 	.login form {
@@ -455,7 +460,13 @@
 		gap: 2rem;
 		a {
 			display: block;
-			color: var(--background);
+			color: var(--primary);
+			opacity: 0.5;
+			transition: var(--transition);
+			&:hover {
+				color: var(--primary);
+				opacity: 1;
+			}
 		}
 	}
 }
