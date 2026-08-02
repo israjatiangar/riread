@@ -399,6 +399,19 @@
 		}
 	}
 }
+@layer LoginAndSignUp {
+	.login {
+		min-height: 100vh;
+		background:
+			linear-gradient(
+				var(--background),
+				var(--_grdStart, rgb(from var(--background) r g b / 0.5)),
+				var(--background)
+			),
+			url(./../img/loginPageBanner.jpg);
+		background-size: contain;
+	}
+}
 
 /* Important to be Removed */
 @layer Debugging {
