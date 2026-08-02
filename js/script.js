@@ -1,3 +1,3 @@
-function toggleBar() {
-	// to be toggled
+function navToggle() {
+	document.getElementById("NavBar").classList.toggle("hidden")
 }

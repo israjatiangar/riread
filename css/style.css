@@ -155,6 +155,10 @@
 			border-color: rgb(from var(--text) r g b / 0.2);
 		}
 	}
+	.hidden {
+		transition: 0.2s ease;
+		height: 10vh;
+	}
 	.bars {
 		display: none;
 		color: var(--text);
@@ -179,11 +183,17 @@
 	}
 	@media only screen and (max-width: 500px) {
 		.nav {
+			max-height: auto;
+			overflow: hidden;
+			padding-bottom: 1rem;
 			display: block;
 			align-items: flex-start;
+			backdrop-filter: blur(6px);
+			background: rgb(from var(--background) r g b / 0.5);
+			border-bottom: 1px rgb(from var(--primary) r g b / 0.1) solid;
+
 			gap: 2rem;
-			max-height: max(80px, 10vh);
-			overflow: hidden;
+			transition: height 0.2s ease;
 			> * {
 				margin: 20px 0;
 			}
@@ -194,9 +204,9 @@
 		.bars {
 			display: block;
 			position: absolute;
-			bottom: 0;
+			top: 0;
 			right: 0;
-			transform: translate(-100%, -50%);
+			transform: translate(-100%, 50%);
 		}
 	}
 }
