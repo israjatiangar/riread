@@ -436,15 +436,20 @@
 	}
 }
 
-@layer OurPicks {
+@layer OurPicksAndOthers {
+	.mostLoved,
 	.ourPicks {
-		counter-reset: counter(count);
 		margin: 0;
 		padding: min(5rem, 10vw);
 		.grid {
 			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 			grid-template-rows: repeat(auto-fit, 1fr);
 			justify-content: center;
+		}
+	}
+	.ourPicks {
+		counter-reset: counter(count);
+		.grid {
 			& > .card {
 				counter-increment: count;
 
@@ -493,7 +498,8 @@
 		}
 	}
 	@media only screen and (max-width: 900px) {
-		.ourPicks {
+		.ourPicks,
+		.mostLoved {
 			padding-top: 12vh;
 		}
 		.ourPicks .grid > .card:first-child {
