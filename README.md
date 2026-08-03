@@ -4,11 +4,11 @@ An online bookstore web application built with HTML and CSS as a foundational pr
 
 ## About the Project
 
-**RiRead** is a _to be responsive_ bookstore website designed to showcase core competencies in HTML and CSS. This project serves as a stepping stone toward becoming a MERN (MongoDB, Express, React, Node.js) stack developer.
+**RiRead** is a ~~to be~~ responsive bookstore website designed to showcase core competencies in HTML and CSS. This project serves as a stepping stone toward becoming a MERN (MongoDB, Express, React, Node.js) stack developer.
 
 ### Purpose
 
-- Demonstrate HTML structure and CSS styling capabilities (~~ if i hadn't known css framework exist, i would have written better css, sorry.~~)
+- Demonstrate HTML structure and CSS styling capabilities
 - Practice building responsive web design with a _tiny little bit of_ JavaScript interactivity
 - Implement a functional responsive navbar using JavaScript
 - Build around a meaningful concept (online bookstore) that interests me
